@@ -1,0 +1,107 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:poppins;
+}
+html{
+  font-size: 62.5%;
+}
+:root{
+  --white-main: #e3ffdb;
+  /* --blue-sub:#3943B7; */
+  --blue-sub:#297045;
+}
+a{
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+body{
+  background-color: var(--white-main);
+}
+/* ------------Start Of Navbar------------ */
+.navbar{
+  width: 100%;
+  height:10dvh;
+  padding: .2rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--blue-sub);
+}
+.logo{
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  width: 5rem;
+}
+
+.links{
+  position: relative;
+}
+.links::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 0.3rem;
+  border-radius: 10px;
+  background-color: var(--white-main);
+  transition: all 0.3s ease-out;
+}
+.links:hover::before{
+  width: 100%;
+}
+/* ------------Start Of HERO------------- */
+/* ------------Start Of Shapes------------- */
+
+/* ------------End Of Shapes------------- */
+
+.hero{
+  height: 90dvh;
+  padding: 0 10vw;
+  display: flex;
+  align-items: center;
+  justify-content:space-around ;
+  background-color: var(--white-main);
+}
+.hero__imageContainer{
+  width: 30dvw;
+  border-radius: 500px;
+  margin-right: 2rem;
+}
+.hero__image{
+  border-radius: 500px;
+  width:100%;
+  height: 100%;
+  border: solid  4px var(--blue-sub);
+}
+.hero__heading--main{
+  text-decoration: underline;
+  font-size: 5rem;
+}
+.hero__heading--sub{
+text-decoration: underline;
+font-size:2.8rem;
+margin-bottom: 2rem;
+}
+.hero__description{
+  width: 60ch;
+  line-height: 26px;
+  font-size: 1.4rem;
+}
+/* ------------------MEDIA 1--------------------- */
+@media only screen and (max-width: 700px){
+.navbar{
+  padding: 0.2rem 0;
+}
+}
+/* ------------------MEDIA 2--------------------- */
+@media only screen and (max-width: 500px){
+.links{
+  font-size: 1.5rem;
+}
+}

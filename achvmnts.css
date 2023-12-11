@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:poppins;
+}
+html{
+  font-size: 62.5%;
+}
+:root{
+  --white-main: #e3ffdb;
+  /* --blue-sub:#3943B7; */
+  --blue-sub:#297045;
+}
+a{
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+body{
+  background-color: var(--white-main);
+}
+/* ------------Start Of Navbar------------ */
+.navbar{
+  z-index: 20;
+  width: 100%;
+  height:10dvh;
+  padding: .2rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--blue-sub);
+}
+.links{
+  position: relative;
+}
+.links::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 0.3rem;
+  border-radius: 10px;
+  background-color: var(--white-main);
+  transition: all 0.3s ease-out;
+}
+.links:hover::before{
+  width: 100%;
+}
+/* ------------Start Of HERO------------- */
+.hero{
+  height: 90dvh;
+  padding: 0 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--white-main);
+  background: radial-gradient(circle,
+      var(--blue-sub) 0%,
+      rgb(255,255,255) 35%);
+  background-size: 200% 200%;
+  background-position: center;
+  animation: bg 30s infinite;
+}
+@keyframes bg{
+  0% {
+    background-position: 0% 50%;
+  }
+  20% {
+    background-position: 140% 50%;
+  }
+  21% {
+    background-position: 140% 150%;
+  }
+  66% {
+    background-position: -65% -80%;
+  }
+  67% {
+    background-position: -65% 120%;
+  }
+  77% {
+    background-position: -50% 0%;
+  }
+  88% {
+    background-position: 70% 110%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.cards{
+  position: relative;
+  padding-top: 13rem;
+  margin:0 2rem;
+  width:30rem;
+  height:25rem;
+  text-align: center;
+  border-radius:5px ;
+  background-color: var(--blue-sub);
+  transition: all .2s ease-out;
+  a{
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 10ch;
+    font-size: 2.3rem;
+    transition: all 0.2s ease-out;
+  }
+}
+.cards:is(:nth-of-type(2),:nth-of-type(4),:nth-of-type(5)) a{
+  top: 50%;
+}
+.cards:hover{
+  cursor: pointer;
+  a{
+    font-size: 2.6rem;
+  }
+}
+.heroInfo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heroInfo{
+    height: 90dvh;
+    padding: 0 8rem;
+    background-color: var(--white-main);
+  p{
+    font-size: 4rem;
+  }
+  a{
+    padding: 1rem;
+    background-color: var(--blue-sub);
+  }
+  a:hover{
+    color: #000;
+  }
+}
