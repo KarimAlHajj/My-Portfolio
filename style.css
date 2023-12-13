@@ -72,6 +72,30 @@ body{
   width: 30dvw;
   border-radius: 500px;
   margin-right: 2rem;
+  animation: fadeToRight 1s ease-out;
+}
+@keyframes fadeToRight{
+  0%{
+    transform: translateX(-40%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.textContainer{
+  animation: fadeToLeft 1s ease-out;
+}
+@keyframes fadeToLeft{
+  0%{
+    transform: translateX(40%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 .hero__image{
   border-radius: 500px;
@@ -93,15 +117,53 @@ margin-bottom: 2rem;
   line-height: 26px;
   font-size: 1.4rem;
 }
+/* =========Course Reflection Page========== */
+
+.reflection__textContainer{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  padding: 2rem 4rem;
+  font-size: 2rem;
+  border-radius: 10px;
+  background-color: var(--blue-sub);
+  animation: fadeToTop 1s ease-out;
+}
+@keyframes fadeToTop{
+  0%{
+    top: 80%;
+    opacity: 0;
+  }
+  85%{
+    top: 46%;
+  }
+  100%{
+    top: 50%;
+    opacity: 1;
+  }
+}
 /* ------------------MEDIA 1--------------------- */
-@media (max-width: 700px){
+@media only screen and (max-width: 700px){
 .navbar{
   padding: 0.2rem 0;
 }
+.links{
+  font-size: 1.2rem;
+}
+.reflection__textContainer{
+  width: 80%;
+  font-size: 1.2rem;
+}
 }
 /* ------------------MEDIA 2--------------------- */
-@media (max-width: 500px){
-.links{
-  font-size: 2rem;
+@media only screen and (max-width: 500px){
+  .links{
+  font-size: .8rem;
+}
+.reflection__textContainer{
+  width: 80%;
+  font-size: 1.2rem;
 }
 }
