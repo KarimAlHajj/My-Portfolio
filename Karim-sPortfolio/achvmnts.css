@@ -11,7 +11,6 @@ html{
   --white-main: #e3ffdb;
   /* --blue-sub:#3943B7; */
   --blue-sub:#297045;
-  --brown-sub: #b8ff45;
 }
 a{
   color: #fff;
@@ -59,7 +58,7 @@ body{
   flex-wrap: wrap;
   background-color: var(--white-main);
   background: radial-gradient(circle,
-      var(--brown-sub) 0%,
+      var(--blue-sub) 0%,
       rgb(255,255,255) 35%);
   background-size: 200% 200%;
   background-position: center;
@@ -101,6 +100,7 @@ body{
   border-radius:5px ;
   background-color: var(--blue-sub);
   transition: all .2s ease-out;
+  animation: marginBang 1s ease-in-out alternate;
   a{
     position: absolute;
     top: 46%;
@@ -109,6 +109,20 @@ body{
     width: 10ch;
     font-size: 2.3rem;
     transition: all 0.2s ease-out;
+  }
+}
+@keyframes marginBang{
+  0%{
+    margin: 4rem;
+    opacity: 0;
+  }
+  90%{
+    margin: -1rem .5rem;
+  }
+  100%{
+    margin: 0 2rem;
+    opacity: 1;
+
   }
 }
 .cards:is(:nth-of-type(2),:nth-of-type(4),:nth-of-type(5)) a{
